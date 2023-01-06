@@ -4,6 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep5 World!");
+        WelcomeMessage();
+        
+
+    }
+
+    static public void WelcomeMessage();
+    {
+        System.Console.WriteLine("Welcome to The Program!");
     }
 }
+    
