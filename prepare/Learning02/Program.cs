@@ -21,7 +21,7 @@ class Program
 
         Resume resume1 = new Resume();
 
-        Resume1._name  = " John Doe";
+        resume1._name  = " John Doe";
 
         resume1.Job1.jobInfoDisplay();
         resume1.Job2.jobInfoDisplay();

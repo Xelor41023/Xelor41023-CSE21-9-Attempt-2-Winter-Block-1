@@ -13,6 +13,13 @@ class Resume
     }
 
     public void getResume ()
+    {
+        foreach (Job job in Jobs);
+        {
+            Job.jobInfoDisplay;
+        }
+
+    }
 
     
 
