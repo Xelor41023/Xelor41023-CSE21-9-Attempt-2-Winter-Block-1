@@ -22,9 +22,11 @@ class Program
         Resume resume1 = new Resume();
 
         resume1._name  = " John Doe";
+        resume1.Jobs.Add(Job1);
+        resume1.Jobs.Add(Job2);
 
-        resume1.Job1.jobInfoDisplay();
-        resume1.Job2.jobInfoDisplay();
+        resume1.displayResume();
+        
 
 
     }

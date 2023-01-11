@@ -6,18 +6,15 @@ class Resume
     public string _name = "";
     public List<Job> Jobs = new List<Job>();
 
-
-    public void getName()
+    public void displayResume()
     {
-        System.Console.WriteLine($"{_name}");
-    }
-
-    public void getResume ()
-    {
-        foreach (Job job in Jobs);
+        System.Console.WriteLine(_name);
+        
+        foreach (Job jobItem in Jobs)
         {
-            Job.jobInfoDisplay;
+            jobItem.jobDisplay();
         }
+
 
     }
 
