@@ -1,17 +1,11 @@
 using.System;
+using System.IO;
 
 
 public class userJournal
 {
-    public string _userName = "";
-    public string _dateTime = "" ;
-
-    public List<string> _journalEntries = new List<string>;
-
-    public static void writeEntries()
-    {
-
-    }
+    string _JournalName = "{MyJournal.txt";
+    string JournalLines = JournalEntries._journalEntries;
 
     public static void saveEntries()
     {
