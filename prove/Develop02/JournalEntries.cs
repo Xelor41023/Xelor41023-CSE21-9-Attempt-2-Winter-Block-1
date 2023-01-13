@@ -5,7 +5,7 @@ public class JournalEntries
 {
     public List<string> _completedJournalEntries = new List <string>();
 
-    static string getDateTime()
+    static string GetDateTime()
     {
         string currentDateTime = "";
         currentDateTime = DateTime.Now.ToString("h:mm:ss tt yyyy-MM-dd"); 
@@ -13,7 +13,7 @@ public class JournalEntries
 
     }
 
-    static string choosePrompt()
+    static string ChoosePrompt()
     {
         string prompt = "";
         Random randomnumber = new Random();
@@ -62,33 +62,33 @@ public class JournalEntries
     {
         string dateTime = "";
         string prompt = "";
-        string JournalEntryInput = "";
-        string JournalEntryInputWithDateAndTime = "";
-        string JournalEntryInputCheck = "";
-        string LoweredJournalEntryInputCheck = JournalEntryInputCheck.ToLower();
-        bool JournalEntryInputDone = false;
-        dateTime = getDateTime();
-        prompt = choosePrompt();
+        string journalEntryInput = "";
+        string journalEntryInputWithDateAndTime = "";
+        string journalEntryInputCheck = "";
+        string loweredJournalEntryInputCheck = journalEntryInputCheck.ToLower();
+        bool journalEntryInputDone = false;
+        dateTime = GetDateTime();
+        prompt = ChoosePrompt();
 
         do{
 
         Console.WriteLine($"Todays prompt is {prompt} please enter your repsonse.");
-        JournalEntryInput = Console.ReadLine();
-        System.Console.WriteLine($"Input Accepted your input was {JournalEntryInput}");
+        journalEntryInput = Console.ReadLine();
+        System.Console.WriteLine($"Input Accepted your input was {journalEntryInput}");
         System.Console.WriteLine("Is this input ok? enter y/n");
-        JournalEntryInputCheck = Console.ReadLine();
+        journalEntryInputCheck = Console.ReadLine();
 
-        if (LoweredJournalEntryInputCheck == "y")
+        if (loweredJournalEntryInputCheck == "y")
         {
             Console.WriteLine("Entry Completed");
-            JournalEntryInputWithDateAndTime = (@$"{dateTime} {JournalEntryInput}");
-            _completedJournalEntries.Add(JournalEntryInputWithDateAndTime);
-            JournalEntryInputDone = true;
+            journalEntryInputWithDateAndTime = (@$"{dateTime} {journalEntryInput}");
+            _completedJournalEntries.Add(journalEntryInputWithDateAndTime);
+            journalEntryInputDone = true;
         }
-        else if (LoweredJournalEntryInputCheck == "n")
+        else if (loweredJournalEntryInputCheck == "n")
         {
             Console.WriteLine("Ok Please Renter your response to the prompt.");
-            JournalEntryInputDone = false;
+            journalEntryInputDone = false;
         }
 
         else
@@ -96,7 +96,7 @@ public class JournalEntries
             System.Console.WriteLine("Invalid input please enter y or n");
         }
 
-        }while (JournalEntryInputDone == false);
+        }while (journalEntryInputDone == false);
 
     }
 

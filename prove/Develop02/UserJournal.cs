@@ -9,12 +9,12 @@ public class UserJournal
     public string makeCsvFile()
     {
         JournalEntries myJournal = new JournalEntries();
-        string _JournalName = "";
+        string _journalName = "";
         Console.WriteLine("Please Enter Journal Name");
-        _JournalName = System.Console.ReadLine();
-        System.Console.WriteLine(@$"Input Accepted Journal Name is now {_JournalName}");
+        _journalName = System.Console.ReadLine();
+        System.Console.WriteLine(@$"Input Accepted Journal Name is now {_journalName}");
 
-        using (StreamWriter outputFile = new StreamWriter(_JournalName))
+        using (StreamWriter outputFile = new StreamWriter(_journalName))
         {
             foreach (string line in myJournal._completedJournalEntries)
             {
