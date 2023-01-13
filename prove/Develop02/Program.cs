@@ -33,7 +33,7 @@ class Program
         }
         else if (UserInput == "5")
         {
-            
+            break;
         }
         else
         {

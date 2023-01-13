@@ -4,8 +4,27 @@ using System.IO;
 
 public class userJournal
 {
-    string _JournalName = "{MyJournal.txt";
-    string JournalLines = JournalEntries._journalEntries;
+    
+    
+    public string MakeCsvFile()
+    {
+        JournalEntries myJournal = new JournalEntries();
+        string _JournalName = "";
+        Console.WriteLine("Please Enter Journal Name");
+        _JournalName = System.Console.ReadLine();
+        System.Console.WriteLine(@$"Input Accepted Journal Name is now {_JournalName}");
+
+        using (StreamWriter outputFile = new StreamWriter(_JournalName))
+        {
+            foreach (string line in myJournal._completedJournalEntries)
+            {
+                File.AppendAllLines();
+
+            }
+
+        }
+
+    }
 
     public static void saveEntries()
     {

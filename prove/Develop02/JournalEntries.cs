@@ -3,8 +3,7 @@ using System;
 
 public class JournalEntries
 {
-    public List<string> _journalEntries = new List<string>();
-    public List<string> _Prompts = new List <string>();
+    public List<string> _completedJournalEntries = new List <string>();
 
     static string getDateTime()
     {
@@ -82,13 +81,13 @@ public class JournalEntries
         if (LoweredJournalEntryInputCheck == "y")
         {
             Console.WriteLine("Entry Completed");
-            JournalEntryInputWithDateAndTime = (@$"{dateTime} {prompt}");
-            _Prompts.Add(JournalEntryInputWithDateAndTime);
+            JournalEntryInputWithDateAndTime = (@$"{dateTime} {JournalEntryInput}");
+            _completedJournalEntries.Add(JournalEntryInputWithDateAndTime);
             JournalEntryInputDone = true;
         }
         else if (LoweredJournalEntryInputCheck == "n")
         {
-            Console.WriteLine("Ok Please Renter your repsone to the prompt.");
+            Console.WriteLine("Ok Please Renter your response to the prompt.");
             JournalEntryInputDone = false;
         }
 
