@@ -1,39 +1,28 @@
 using.System;
 using System.IO;
+using System.Text;
 
 
 public class UserJournal
 {
-    
-    
-    public string makeCsvFile()
+    public void writeToCSV()
     {
-        JournalEntries myJournal = new JournalEntries();
-        string _journalName = "";
-        Console.WriteLine("Please Enter Journal Name");
-        _journalName = System.Console.ReadLine();
-        System.Console.WriteLine(@$"Input Accepted Journal Name is now {_journalName}");
+       StringBuilder builder = new StringBuilder();
 
-        using (StreamWriter outputFile = new StreamWriter(_journalName))
-        {
-            foreach (string line in myJournal._completedJournalEntries)
-            {
-                File.AppendAllLines();
-
-            }
-
-        }
-
+       string text1 = "Text1";
+       string text2 = "Text2";
+       builder.AppendLine(string.Format("{0}|{1}", text1, text2));
     }
 
-    public static void saveEntries()
+    public void ReadFromCSV()
     {
+        StreamReader streamReader = new StreamReader(filePath);
 
-    }
+        while (!streamReader.EndOfStream)
+        {var line = streamReader.ReadLine();
+        var values =  line.Split('|');
 
-    public static void loadEntries()
-    {
-
+        Console.WriteLine("{0}}(1}", values[0], values[1]);
     }
 
 
