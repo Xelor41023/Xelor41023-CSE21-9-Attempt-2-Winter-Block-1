@@ -31,7 +31,7 @@ public class Activity
     }
     public string getActivityEndMessage()
     {
-        return _activityEnd;
+        return _activityendMessage;
     }
 
     public void displaySpinner(int numSecondsToRun)

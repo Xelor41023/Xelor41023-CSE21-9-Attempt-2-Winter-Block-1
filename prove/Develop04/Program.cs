@@ -11,7 +11,8 @@ class Program
             2. Reflection Activity
             3. Listing Activity
             4. Quit
-            )"
+
+            ");
         
             switch(ActivityChoice)
             {
@@ -25,10 +26,7 @@ class Program
 
 
             }
-        );
-
-
-
+        
     
     }
 }
