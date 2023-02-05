@@ -13,7 +13,7 @@ public class Circle : Shapes
     
     public override double GetArea()
     {
-        double area = Math.PI * (Math.Pow(_radius , 2));
+        double area = Math.PI * Math.Pow(_radius , 2);
         return area;
     }
 }
